@@ -48,12 +48,12 @@ if __name__ == "__main__":
     fragment(word, r_initial, r_end)
 
     print('\n Tell me 2 words \n ')
-    pal_1 = input('first word: ')
-    pal_2 = input('second word: ')
-    Upp_Low(pal_1, pal_2)
+    word_1 = input('first word: ')
+    word_2 = input('second word: ')
+    Upp_Low(word_1, word_2)
 
     if_nombre(name, last_name)
 
-    palabra_pig = input('\n Give me a word and I all pass it on to Pig Latin. \n')
-    pig_latin(palabra_pig)
+    word_pig = input('\n Give me a word and I all pass it on to Pig Latin. \n')
+    pig_latin(word_pig)
     

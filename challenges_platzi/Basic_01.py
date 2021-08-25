@@ -32,7 +32,7 @@ def cal_div(total, num_people, percentage):
     every_people = (total + tip)/num_people
     print(f'\n ach person pays ${every_people}')
 
-def pasar(days):
+def convert(days):
     hours = days * 24
     minutes = hours * 60
     seconds = seconds * 60
@@ -52,7 +52,7 @@ def kilometers(milles):
     
 
 
-def actividad(name):
+def activity(name):
     print(f'{name}, What do you want to do?')
 
     activity = input('''

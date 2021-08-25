@@ -85,8 +85,5 @@ def main():
     lim = abs(int(input('Tell me a number: ')))
     line(sign, lim)
 
-
-
-
 if __name__ == '__main__':
     main()
