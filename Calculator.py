@@ -15,10 +15,11 @@ screen.grid(row=0, column=0, columnspan=5, padx=8, pady=5)
 Ans.grid(row=6, column=3, sticky=E+W,columnspan=2)
 
 #-----FUNTIONS-----
+
 def click_button(event):
     global i
     screen.insert(i, event)
-    i +=1
+    i += len(str(event))
 
 def delete():
     screen.delete(0, END)
