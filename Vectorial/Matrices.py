@@ -1,23 +1,23 @@
-from Vectores import Vector
+from Vectors import Vector
 
 
 class Matriz:
 
     def __init__(self, matriz):
-        self.dimencion = len(matriz)
+        self.dimension = len(matriz)
         self.matriz = matriz
     
-    def sumar(self, matriz):
-        solution = [Vector(self.matriz[i]).sumar(  Vector(matriz.matriz[i])  ) for i in range(self.dimencion)]
+    def sum(self, matriz):
+        solution = [Vector(self.matriz[i]).sum(  Vector(matriz.matriz[i])  ) for i in range(self.dimension)]
         return solution
     
-    def restar(self, matriz):
-        solution = [Vector(self.matriz[i]).restar(  Vector(matriz.matriz[i])  ) for i in range(self.dimencion)]
+    def subtract(self, matriz):
+        solution = [Vector(self.matriz[i]).subtract(  Vector(matriz.matriz[i])  ) for i in range(self.dimension)]
         return solution
 
 
-    def mul_escalar(self, escalar):
-        solution = [ Vector(i).mul_escalar(escalar) for i in self.matriz]
+    def mul_scalar(self, escalar):
+        solution = [ Vector(i).mul_scalar(escalar) for i in self.matriz]
         return solution  
 
 if __name__ == '__main__':
@@ -26,4 +26,4 @@ if __name__ == '__main__':
     m_2 = Matriz([[2,2,2],[2,2,2],[2,2,2]])
     m_3 = Matriz([[3,3,3],[3,3,3],[3,3,3]])
 
-    print(m_1.sumar(m_1))
+    print(m_1.sum(m_1))

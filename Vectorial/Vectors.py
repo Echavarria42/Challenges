@@ -1,4 +1,4 @@
-from math_basic import multiplicar
+from Math__BasicFuntions import multiplication
 
 class Vector:
 
@@ -19,7 +19,7 @@ class Vector:
     def dot_product(self, vector):
         solution = 0
         for i in range(self.dimension):
-            solution += (multiplicar([self.vector[i], vector.vector[i]]))
+            solution += (multiplication([self.vector[i], vector.vector[i]]))
         return solution  
     
     def mul_scalar(self, scalar):

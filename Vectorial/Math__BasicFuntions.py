@@ -1,35 +1,33 @@
-def suma(lst):
-    return sum(lst)
-
-def resta(lst):
+def subtraction(lst):
     inicio = lst[0]
     for i in lst[1:]: 
         inicio -= i
     return inicio
 
-def multiplicar(lst):
+def multiplication(lst):
     solution = 1
     for i in lst:
         solution *= i
     return solution
 
-def dividir(lst):
+def division(lst):
     inicio = lst[0]
     for i in lst[1:]: 
         inicio /= i
     return inicio
 
-def elevar(lst):
+def raising(lst):
     inicio = lst[0]
     for i in lst[1:]: 
         inicio **= i
     return inicio
 
-def raiz(lst):
+def root(lst):
     inicio = lst[0]
-    return inicio**(1/(multiplicar(lst[1:])))
+    return inicio**(1/(multiplication(lst[1:])))
 
-def inserta(x, lst, i):
+#Let "X" be a list to be inserted and "i" be the index where you want it to be inserted.
+def insert(x, lst, i):
     conj =  lst[:i] + [x] + lst[i:]
     sol = ""
     for i in conj:
@@ -37,26 +35,23 @@ def inserta(x, lst, i):
     print(sol)
     return conj
 
-def inserta_multiple(x, lst):
+#insert an item into a list at all its initial indices
+def insert_multiple(x, lst):
     solution = []
     for i in range(len(lst)+1):
-        num_new = inserta(x, lst, i)
+        num_new = insert(x, lst, i)
         solution.append(num_new)
     return solution
 
-def permuta(c):
+def swap(c):
     if len(c) == 0:
         return [[]]
-    return sum([inserta_multiple(c[0], s)
-                for s in permuta(c[1:])],
+    return sum([insert_multiple(c[0], s)
+                for s in insert(c[1:])],
                [])
 
-def promedio(lista):
+def average(lista):
     return sum(lista)/len(lista)
 
-def piramide(n):
-    for i in range(n):
-        print(" "*(n-i-1), end="")
-        print(f"* "*(i+1))
 
-print(piramide(5))
+
