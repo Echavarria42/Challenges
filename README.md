@@ -1,20 +1,33 @@
-# Challenges
-This repository will contain code snippets which are solutions to some challenges proposed by different platforms, I hope it will be helpful.
+1) Basic_01  => "https://platzi.com/comunidad/retos-de-programacion-en-cualquier-lenguaje-primer-nivel-salida-de-mensajes/"
 
-**Calculator:**
+You will choose what to do between: **Adding a pair of numbers, Subtracting pizzas, Adding 2 and Multiplying by another, Past and Future Age, Dividing the count, Calculating days, Converting Miles and Dividing.**
 
-The file Calculator.py, as its name indicates it is a calculator that performs the basic mathematical operations, such as addition, subtraction, multiplication and division, having the possibility of introducing rationals. It also includes trigonometric operations such as sine and cosine, the power symbol and two irrational numbers Euler and Pi.
-A lower right box that shows the last result, the possibility of deleting everything inside the box or only the last element inside the line.
-It was made with Tkinter and the math library.
+The file simply needs to be run and you will scroll through the different activities provided by the code.
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/63327224/133514910-3cc7c62a-a886-4b69-8dfd-453e36be0c76.png" width="150"> </p>
+2) Basic_02  => "https://platzi.com/comunidad/retos-de-programacion-para-cualquier-lenguaje-segundo-nivel-condicionales/"
 
+These are functions that meet the specifications of the challenges posted in the link, functions include: **Major and minor number, In range, please, Changing ranges, I like turtles, How's the weather, Age allowed and Optional messages.**
 
-# Modular Algebra:
+The code is composed of functions which do not run automatically, if you want to test them you will have to call them from **main()**.
 
-**Chinese remainder theorem:** (expressed in terms of congruences) is true over every principal ideal domain. It has been generalized to any commutative ring, with a formulation involving ideals. 
+3) Basic_03  => "https://platzi.com/comunidad/retos-de-programacion-para-cualquier-lenguaje-tercer-nivel-strings/"
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/63327224/132135430-84f25d6b-1508-4ce3-92f3-a29700665e5b.png" width="800"> </p>
+It is a consecutive questionnaire with instant answers, it is carried out by means of inputs that directly call the functions: **String length, initials, trim sentences, uppercase_LOWERCASE, short or long name and Pig Latin.**
 
-**Euclidean division:**  is the process of dividing one integer (the dividend) by another (the divisor), in a way that produces a quotient and a remainder smaller than the divisor. The greatest common divisor (or highest common factor) of two integers a, b ∈ Z is the largest integer which divides them both. 
+Returning as a result what was proposed in the Platzi challenge.
 
+4) Basic_04  => "https://platzi.com/comunidad/retos-de-programacion-en-cualquier-lenguaje-cuarto-nivel-matematicas/"
+
+It is a consecutive quiz that performs basic mathematical and geometric operations such as: **Multiplication, Rounding, Square Root, Area of a circle, A number inside a number and area and perimeter of a prism.**
+
+It will ask you the basics such as simple numbers to multiply, the radius or height of figures, doing it continuously and printing the results.
+
+5) Basic_05  => "https://platzi.com/comunidad/retos-de-programacion-en-cualquier-lenguaje-quinto-nivel-ciclo-for/"
+
+It is a consecutive questionnaire that asks a series of questions in order to run the functions that solve the challenges proposed by platzi, among these functions are: **Favorite course, acrostic, favorite animal, multiplication table, countdown, less than 15, add 4 numbers, number line."**
+
+You just have to run the program and you will see all the results of these functions.
+
+6) Basic_06  => "https://platzi.com/comunidad/retos-de-programacion-en-cualquier-lenguaje-sexto-nivel-ciclo-while-2/"
+
+It is a consecutive questionnaire, which means that you only have to run the file to see the results, among the functions that are included in the file are: **Sum up to fifty, Beyond forty-two, Consecutive sums, Guest list, Guess the secret number.**
