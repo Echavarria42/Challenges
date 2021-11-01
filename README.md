@@ -1,3 +1,6 @@
+# Challenges
+This repository will contain code snippets which are solutions to some challenges proposed by different platforms, I hope it will be helpful.
+
 1) Basic_01  => "https://platzi.com/comunidad/retos-de-programacion-en-cualquier-lenguaje-primer-nivel-salida-de-mensajes/"
 
 You will choose what to do between: **Adding a pair of numbers, Subtracting pizzas, Adding 2 and Multiplying by another, Past and Future Age, Dividing the count, Calculating days, Converting Miles and Dividing.**
@@ -31,3 +34,7 @@ You just have to run the program and you will see all the results of these funct
 6) Basic_06  => "https://platzi.com/comunidad/retos-de-programacion-en-cualquier-lenguaje-sexto-nivel-ciclo-while-2/"
 
 It is a consecutive questionnaire, which means that you only have to run the file to see the results, among the functions that are included in the file are: **Sum up to fifty, Beyond forty-two, Consecutive sums, Guest list, Guess the secret number.**
+
+7) code__waris =>
+
+It is a sequence of functions with solutions to problems proposed by the Code-Wars platform. These functions include: **Exact Divisors, Sum of digits, Word alrevez, Tribonacci, Permute, etc.**
