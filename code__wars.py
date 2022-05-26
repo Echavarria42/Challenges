@@ -1,3 +1,48 @@
+# Minima cantidad de Monedas
+import numpy as np
+from sympy.utilities.iterables import multiset_permutations
+
+# HALLAR EL DETERMINANTE DE UNA MATRIZ DADA EN FORMA DE STRING
+def matrizStringDet(strArr):
+  matriz = []
+  lista = []
+  for i in strArr:
+    if i != "<>":
+      lista.append(int(i))
+    else:
+      matriz.append(lista)
+      lista = []
+  matriz.append(lista)
+  n_array = np.array(matriz) 
+  det = np.linalg.det(n_array) 
+  return round(det)
+
+#  n = ["5","0","<>","0","5"]
+#  b = ["1","2","4","<>","2","1","1","<>","4","1","1"]
+
+def aux(allmonedas, num):
+  final = num
+  monedas = 0
+  for moneda in allmonedas:
+    while final >= moneda:
+      final -= moneda
+      monedas += 1
+  
+  return monedas
+
+def Coins(num):
+  final = []
+  a = np.array([11,9,7,5,1])
+  for p in multiset_permutations(a):
+    final.append(aux(p, num))
+  
+  return min(final)
+
+#  n = 6
+#  b = 16
+#  c = 25
+
+
 # Sub lista Creciente 
 def subCreciente(arr):
   sumalistas = []
