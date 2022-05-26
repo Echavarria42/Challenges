@@ -1,3 +1,83 @@
+# Sub lista Creciente 
+def subCreciente(arr):
+  sumalistas = []
+  aux = arr[::]
+  for i in range(len(arr)):
+    count = 0
+    lista_num = [arr[i]]
+    aux.remove(arr[i])
+    for j in range(len(aux)):
+      if lista_num[count] < aux[j]:
+        lista_num.append(aux[j])
+        count += 1
+    sumalistas.append(len(lista_num))
+  
+  return max(sumalistas)
+
+#   lista = [10, 22, 9, 33, 21, 50, 41, 60, 22, 68, 90]
+#  lista_1 = [9, 9, 4, 2]
+
+
+# DIVISION DE PALABRA ENTRE FRAGMENTOS DADOS
+def DividorPalabra(strArr):
+  for i in range(len(strArr[0])):
+    if strArr[0][:i+1] in strArr[1] and strArr[0][i+1:] in strArr[1] and strArr[0][:i+1] + strArr[0][i+1:] == strArr[0]:
+      return f'{strArr[0][:i+1]},{strArr[0][i+1:]}'
+  return "not possible"
+
+#  lista_1 = ["abcgefd", "a,ab,abc,abcg,b,c,dog,e,efd,zzzz"]
+#  lista = ["baseball", "a,all,b,ball,bas,base,cat,code,d,e,quit,z"]
+  
+
+# Columnas Suma Mayor tamaño igual altura
+def ArrayChallenge(arr):
+  lista = []
+
+  for i in range(len(arr)):
+    h = arr[i]
+    newarr = arr[::]
+    newarr.remove(arr[i])
+    for j in range(len(arr)-1):
+      if newarr[j] >= arr[i]:
+        h += arr[i]
+      else:
+        lista.append(h)
+  return max(lista)
+
+# lista = [6, 3, 1, 4, 12, 4]
+# lista_1 = [5, 6, 7, 4, 1]
+# lista_2 = [2, 1, 3, 4, 1]
+
+# Promedio igual a moda
+def Prom_Moda(arr):
+  count = {}
+  for i in arr:
+    count[arr.count(i)] = i
+  promedio = int(sum(arr)/len(arr))
+
+  if promedio == count[max(count)]:
+    return 1
+  else:
+    return 0
+
+#   lista = [5, 3, 3, 3, 1] 
+
+# 2X2 de VOCALES EN UNA MATRIZ
+vocales = ["a", "e","i", "o", "u"]
+def vocales2X2(strArr):
+  for i in range(int(len(strArr)-1)):
+    for j in range(int(len(strArr[0])-1)):
+      if strArr[i][j] in vocales and strArr[i][j+1] in vocales and strArr[i+1][j] in vocales and strArr[i+1][j+1] in vocales:
+       return(f"{i}-{j}")
+       break
+      
+  return "not found"
+
+#  matriz = ["abcd", "eikr", "oufj"]
+#  matriz_1 = ["aqrst", "ukaei", "ffooo"]
+# matriz_2 = ["gg", "ff"]
+
+
 # ***ENCUENTRA LOS DIVISORES EXACTOS***
 
 
