@@ -3,16 +3,6 @@ from models.Book import Book
 from models.Client import Client
 
 
-route = ""
-def save_file(objeto_registrado):
-
-    def registrar_objeto():
-        with open(route, "a+") as ar:
-            ar.write(objeto_registrado())
-    return registrar_objeto
-
-
-
 def menu():
     aux = -1
     while aux != 5:
@@ -28,11 +18,11 @@ def menu():
             pass
 
 if __name__ == "__main__":
-    c1 = Cliente(1000295140, "Mateo", "echavarria.0042@gmail.com", 123123123)
-    c1.guardar_cliente()
+    c1 = Client(1034234654, "Mateo", "echavarria.0042@gmail.com", 123123123)
+    c1.save_client()
 
-    p1 = Pelicula("Nemo", 2004, 120, 8, "familiar", 50000, 2000, 5)
-    p1.guardar_pelicula()
+    p1 = Movie("Nemo", 2004, 120, 8, "familiar", 50000, 2000, 5)
+    p1.save_movie()
 
-    l1 = Libro("Poemas", "Mateo Echavarria", "Independiente", "Y nuestras almas vueltas una sola como si nos hubieran forjado con el mismo odio", "poesia", 20000, 2000, 1)
-    l1.guardar_libro()
+    l1 = Book("Poemas", "Mateo Echavarria", "Independiente", "Y nuestras almas vueltas una sola como si nos hubieran forjado con el mismo odio", "poesia", 20000, 2000, 1)
+    l1.save_book()

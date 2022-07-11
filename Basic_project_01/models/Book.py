@@ -1,3 +1,4 @@
+from decorators import save_file
 
 class Book:
     _books = []
@@ -30,20 +31,9 @@ class Book:
     def leer(self):
         pass
 
+    @save_file
     def save_book(self):
-        from main import save_file
-        import main
-        main.route = f"files/Books/{self.name}.txt"
-
-        @save_file
-        def save():
-            return f"""{self.name}
-{self.author}
-{self.publisher}
-{self.genre}
-{self.content}"""
-
-        return save()
+        return f"{self.name}\n{self.author}\n{self.publisher} - {self.genre}\n{self.content}"
 
     @classmethod
     def get_Books(cls):

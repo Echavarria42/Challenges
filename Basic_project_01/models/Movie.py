@@ -1,3 +1,5 @@
+from decorators import save_file
+
 class Movie:
     _movies = []
 
@@ -30,18 +32,10 @@ class Movie:
     def ver(self):
         pass
 
-    def save_movie(self):
-        from main import save_file
-        import main
-        main.route = "files/movies.txt"
-
-        @save_file
-        def save():
-            return f"{self.name},{self.year},{self.duration_min},{self.age_allowed},{self.gender},{self.prestamos},{self.sale_price},{self.rental_price},{self.available_quantity}\n"
-
-        return save()
-
-    
+    @save_file
+    def save_movie(self):      
+        return f"{self.name},{self.year},{self.duration_min},{self.age_allowed},{self.gender},{self.loans},{self.sale_price},{self.rental_price},{self.available_quantity}\n"
+ 
     @classmethod
     def get_Movies(cls):
         return cls._Movies

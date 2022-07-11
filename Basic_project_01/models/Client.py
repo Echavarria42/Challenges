@@ -1,6 +1,7 @@
 
 from models.Book import Book
 from models.Movie import Movie
+from decorators import save_file
 
 class Client:
     _clients = []
@@ -22,17 +23,10 @@ class Client:
         Movie.rent()
         self.Books_prestados.append(Movie)
     
-
+    @save_file
     def save_client(self):
-        from main import save_file
-        import main
-        main.route = "files/clients.txt"
+        return f"{self.name},{self.cc},{self.email},{self.mobile},{self.books_rented},{self.movies_rented}\n"
 
-        @save_file
-        def save():
-            return f"{self.name},{self.cc},{self.email},{self.mobile},{self.books_rented},{self.movies_rented}\n"
-
-        return save()
 
     @classmethod
     def get_clients(cls):
