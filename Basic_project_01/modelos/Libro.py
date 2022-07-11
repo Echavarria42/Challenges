@@ -13,7 +13,17 @@ class Libro:
         self.precio_venta = precio_venta
         self.precio_alquiler = precio_alquiler
         self.cantidad_disponible = cant_disponible
-        Libro._libros.append(self)
+        Libro._libros.append({
+            "nombre" : nombre,
+            "autor" : autor,
+            "num_paginas" : num_paginas,
+            "editorial" : editorial,
+            "contenido" : contenido,
+            "prestamos" : self.prestamos,
+            "precio_venta" : precio_venta,
+            "precio_alquiler" : precio_alquiler,
+            "cantidad_disponible" : "cantidad_disponible"
+            })
     
     def prestar(self):
         self.prestamos += 1

@@ -11,8 +11,18 @@ class Pelicula:
         self.precio_venta = precio_venta
         self.precio_alquiler = precio_alquiler
         self.cantidad_disponible = cant_disponible
-        Pelicula._peliculas.append(self)
-    
+        Pelicula._peliculas.append({
+            "nombre" : nombre,
+            "anho" : anho,
+            "duracion_min" : duracion_min,
+            "edad_permitida" : edad_permitida,
+            "genero" : genero,
+            "prestamos" : self.prestamos,
+            "precio_venta" : precio_venta,
+            "precio_alquiler" : precio_alquiler,
+            "cantidad_disponible" : "cantidad_disponible"
+            })
+            
     def prestar(self):
         self.prestamos += 1
         self.cantidad_disponible -= 1
