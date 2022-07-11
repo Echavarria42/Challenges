@@ -33,3 +33,6 @@ if __name__ == "__main__":
 
     p1 = Pelicula("Nemo", 2004, 120, 8, "familiar", 50000, 2000, 5)
     p1.guardar_pelicula()
+
+    l1 = Libro("Poemas", "Mateo Echavarria", "Independiente", "Y nuestras almas vueltas una sola como si nos hubieran forjado con el mismo odio", "poesia", 20000, 2000, 1)
+    l1.guardar_libro()

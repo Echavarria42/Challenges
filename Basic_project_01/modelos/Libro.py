@@ -30,7 +30,7 @@ class Libro:
     def leer(self):
         pass
 
-    def guardar_pelicula(self):
+    def guardar_libro(self):
         from main import guardar_archivo
         import main
         main.ruta = f"archivos/Libros/{self.nombre}.txt"
