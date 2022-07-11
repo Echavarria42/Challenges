@@ -1,13 +1,13 @@
-from modelos.Pelicula import Pelicula
-from modelos.Libro import Libro
-from modelos.Cliente import Cliente
+from models.Movie import Movie
+from models.Book import Book
+from models.Client import Client
 
 
-ruta = ""
-def guardar_archivo(objeto_registrado):
+route = ""
+def save_file(objeto_registrado):
 
     def registrar_objeto():
-        with open(ruta, "a+") as ar:
+        with open(route, "a+") as ar:
             ar.write(objeto_registrado())
     return registrar_objeto
 
