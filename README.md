@@ -1,6 +1,12 @@
 # Challenges
 This repository will contain code snippets which are solutions to some challenges proposed by different platforms, I hope it will be helpful.
 
+A) Basic_project_01 =>
+
+Here you can find a brief demonstration of the handling of **classes, files, packages and decorators.**
+It is an abstraction of a model of a *Store* which sells and rents *Books* and/or *Movies* to *Customers.* 
+The implementation of file handling is reflected in the *save_book, movie or client* method. This method makes use of a *file_save* decorator which is in charge of appending the created object.
+
 1) Basic_01  => "https://platzi.com/comunidad/retos-de-programacion-en-cualquier-lenguaje-primer-nivel-salida-de-mensajes/"
 
 You will choose what to do between: **Adding a pair of numbers, Subtracting pizzas, Adding 2 and Multiplying by another, Past and Future Age, Dividing the count, Calculating days, Converting Miles and Dividing.**
@@ -35,6 +41,14 @@ You just have to run the program and you will see all the results of these funct
 
 It is a consecutive questionnaire, which means that you only have to run the file to see the results, among the functions that are included in the file are: **Sum up to fifty, Beyond forty-two, Consecutive sums, Guest list, Guess the secret number.**
 
-7) code__waris =>
+7) code__wars =>
 
 It is a sequence of functions with solutions to problems proposed by the Code-Wars platform. These functions include: **Exact Divisors, Sum of digits, Word alrevez, Tribonacci, Permute, etc.**
+
+8) decorador =>
+
+File containing simple example of the use of **decorators**
+
+9) manejo_archivos =>
+
+This is a basic program to visualize file management and logging.
