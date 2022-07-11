@@ -20,15 +20,27 @@ class Pelicula:
             "prestamos" : self.prestamos,
             "precio_venta" : precio_venta,
             "precio_alquiler" : precio_alquiler,
-            "cantidad_disponible" : "cantidad_disponible"
+            "cantidad_disponible" : cant_disponible
             })
-            
+
     def prestar(self):
         self.prestamos += 1
         self.cantidad_disponible -= 1
     
     def ver(self):
         pass
+
+    def guardar_pelicula(self):
+        from main import guardar_archivo
+        import main
+        main.ruta = "archivos/peliculas.txt"
+
+        @guardar_archivo
+        def guardar():
+            return f"{self.nombre},{self.anho},{self.duracion_min},{self.edad_permitida},{self.genero},{self.prestamos},{self.precio_venta},{self.precio_alquiler},{self.cantidad_disponible}"
+
+        return guardar()
+
     
     @classmethod
     def get_peliculas(cls):

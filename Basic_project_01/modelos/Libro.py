@@ -2,10 +2,9 @@
 class Libro:
     _libros = []
 
-    def __init__(self, nombre, autor, num_paginas, editorial, contenido, genero, precio_venta, precio_alquiler, cant_disponible):
+    def __init__(self, nombre, autor, editorial, contenido, genero, precio_venta, precio_alquiler, cant_disponible):
         self.nombre = nombre
         self.autor = autor
-        self.num_paginas = num_paginas
         self.editorial = editorial
         self.contenido = contenido
         self.genero = genero
@@ -16,7 +15,6 @@ class Libro:
         Libro._libros.append({
             "nombre" : nombre,
             "autor" : autor,
-            "num_paginas" : num_paginas,
             "editorial" : editorial,
             "contenido" : contenido,
             "prestamos" : self.prestamos,
@@ -31,6 +29,21 @@ class Libro:
     
     def leer(self):
         pass
+
+    def guardar_pelicula(self):
+        from main import guardar_archivo
+        import main
+        main.ruta = f"archivos/Libros/{self.nombre}.txt"
+
+        @guardar_archivo
+        def guardar():
+            return f"""{self.nombre}
+{self.autor}
+{self.editorial}
+{self.genero}
+{self.contenido}"""
+
+        return guardar()
 
     @classmethod
     def get_libros(cls):

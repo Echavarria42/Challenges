@@ -1,3 +1,5 @@
+from modelos.Pelicula import Pelicula
+from modelos.Libro import Libro
 from modelos.Cliente import Cliente
 
 
@@ -28,3 +30,6 @@ def menu():
 if __name__ == "__main__":
     c1 = Cliente(1000295140, "Mateo", "echavarria.0042@gmail.com", 123123123)
     c1.guardar_cliente()
+
+    p1 = Pelicula("Nemo", 2004, 120, 8, "familiar", 50000, 2000, 5)
+    p1.guardar_pelicula()
