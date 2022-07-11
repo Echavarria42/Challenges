@@ -4,9 +4,10 @@ def decoradorSaludar(respuesta):
     
     return saluda
 
+@decoradorSaludar
 def preguntarNombre():
     return input("¿Cual es tu nombre? : ")
 
 
-a = decoradorSaludar(preguntarNombre)
-a()
+#a = decoradorSaludar(preguntarNombre)
+preguntarNombre()
