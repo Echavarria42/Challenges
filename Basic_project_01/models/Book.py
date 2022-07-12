@@ -1,4 +1,4 @@
-from decorators import save_file
+from decorators import save_file, only
 
 class Book:
     _books = []
@@ -13,16 +13,11 @@ class Book:
         self.sale_price = sale_price
         self.rental_price = rental_price
         self.available_quantity = available_quantity
-        Book._books.append({
-            "name" : name,
-            "author" : author,
-            "publisher" : publisher,
-            "content" : content,
-            "loans" : self.loans,
-            "sale_price" : sale_price,
-            "rental_price" : rental_price,
-            "available_quantity" : available_quantity
-            })
+
+        @only
+        def comprobar(self):
+            Book._books.append(self)               
+        comprobar(self)
     
     def rent(self):
         self.loans += 1
@@ -32,9 +27,12 @@ class Book:
         pass
 
     @save_file
-    def save_book(self):
-        return f"{self.name}\n{self.author}\n{self.publisher} - {self.genre}\n{self.content}"
+    def save(self):
+        return f'{self.name}\n{self.author}\n{self.publisher} - {self.genre}\n{self.content}'
 
     @classmethod
-    def get_Books(cls):
-        return cls._Books
+    def get_books(cls):
+        return cls._books
+
+    def __str__(self) -> str:
+        return f"{self.name},{self.author},{self.publisher},{self.content},{self.loans},{self.sale_price},{self.rental_price},{self.available_quantity}"

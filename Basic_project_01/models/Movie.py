@@ -1,8 +1,8 @@
-from decorators import save_file
+from decorators import save_file, only
 
 class Movie:
     _movies = []
-
+ 
     def __init__(self, name, year, duration_min, age_allowed, gender, sale_price, rental_price, available_quantity ):
         self.name = name
         self.year = year
@@ -13,17 +13,11 @@ class Movie:
         self.sale_price = sale_price
         self.rental_price = rental_price
         self.available_quantity = available_quantity 
-        Movie._movies.append({
-            "name" : name,
-            "year" : year,
-            "duration_min" : duration_min,
-            "age_allowed" : age_allowed,
-            "gender" : gender,
-            "loans" : self.loans,
-            "sale_price" : sale_price,
-            "rental_price" : rental_price,
-            "available_quantity" : available_quantity 
-            })
+
+        @only
+        def comprobar(self):
+            Movie._movies.append(self)
+        comprobar(self)
 
     def rent(self):
         self.loans += 1
@@ -33,9 +27,12 @@ class Movie:
         pass
 
     @save_file
-    def save_movie(self):      
+    def save(self):      
         return f"{self.name},{self.year},{self.duration_min},{self.age_allowed},{self.gender},{self.loans},{self.sale_price},{self.rental_price},{self.available_quantity}\n"
  
     @classmethod
-    def get_Movies(cls):
-        return cls._Movies
+    def get_movies(cls):
+        return cls._movies
+    
+    def __str__(self) -> str:
+        return f"{self.name},{self.year},{self.duration_min},{self.age_allowed},{self.gender},{self.loans},{self.sale_price},{self.rental_price},{self.available_quantity}"

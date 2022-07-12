@@ -1,7 +1,7 @@
 
 from models.Book import Book
 from models.Movie import Movie
-from decorators import save_file
+from decorators import save_file, only
 
 class Client:
     _clients = []
@@ -13,7 +13,12 @@ class Client:
         self.mobile = mobile
         self.books_rented = []
         self.movies_rented = []
-        Client._clients.append(self)
+
+        @only
+        def comprobar(self):
+            Client._clients.append(self)
+
+        comprobar(self)
     
     def rent_Book(self, Book : Book):
         Book.rent()
@@ -24,10 +29,13 @@ class Client:
         self.Books_prestados.append(Movie)
     
     @save_file
-    def save_client(self):
+    def save(self):
         return f"{self.name},{self.cc},{self.email},{self.mobile},{self.books_rented},{self.movies_rented}\n"
 
 
     @classmethod
     def get_clients(cls):
         return cls._clients
+    
+    def __str__(self) -> str:
+        return f"{self.name},{self.email},{self.mobile}"
