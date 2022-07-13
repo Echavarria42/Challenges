@@ -9,20 +9,31 @@ my_db = mysql.connector.connect(
 
 my_cursor = my_db.cursor()
 
-#sql = "CREATE DATABASE basic_sql" # Creación de base de batos
-#my_cursor.execute(sql)                 # Ejecutar 
+#create_database = "CREATE DATABASE basic_sql"
+#my_cursor.execute(create_database)               # Ejecutar 
 
-#sql = "DROP DATABASE basicproject02"    # Eliminar una base de datos
-#my_cursor.execute(sql)
+#delete_database = "DROP DATABASE basicproject02"   
+#my_cursor.execute(delete_database)
 
 """
-sql = "SHOW DATABASES"                  # Mostrar todas las base de datos
-my_cursor.execute(sql)
+show_databases = "SHOW DATABASES"         
+my_cursor.execute(show_databases)
+
+"""
+'''
+create_table = """ CREATE TABLE client(
+    name VARCHAR (255),
+    lastname VARCHAR (255)
+) """
+my_cursor.execute(create_table)
+'''
+
+#delete_table = "DROP TABLE IF EXISTS client" # Elimine la tabla si existe
+#my_cursor.execute(delete_table)
+
+my_cursor.execute("SHOW TABLES")
 
 for item in my_cursor:
     print(item)
-
-"""
-
 
 my_db.close() #Cerrar Base de datos
