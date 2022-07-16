@@ -50,6 +50,19 @@ VALUES('Juan', 'Molina') """
 my_cursor.execute(add_client)
 my_db.commit()'''
 
+add_client_2 = """ INSERT INTO clients
+(name, lastname)
+VALUES(%s,%s)"""
+
+#values = ("Hernan", "Guisao")  
+#my_cursor.execute(add_client_2, values) #Insertar un solo registro
+
+
+values = [("Pedro", "Picapiedra"), ("Juliana", "Trujillo"), ("Señor", "Cosa")]
+my_cursor.executemany(add_client_2, values) #Instertar multiples registros con el uso de executemany
+my_db.commit()
+
+
 my_cursor.execute("SELECT * FROM clients")
 for client in my_cursor:
     print(client)
