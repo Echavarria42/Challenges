@@ -31,9 +31,19 @@ my_cursor.execute(create_table)
 #delete_table = "DROP TABLE IF EXISTS client" # Elimine la tabla si existe
 #my_cursor.execute(delete_table)
 
-my_cursor.execute("SHOW TABLES")
+'''alter_table = """ ALTER TABLE clients
+ADD client_id INT AUTO_INCREMENT PRIMARY KEY"""
+my_cursor.execute(alter_table)'''
+
+colums_table = "DESCRIBE clients"    
+my_cursor.execute(colums_table)
 
 for item in my_cursor:
     print(item)
+
+"""my_cursor.execute("SHOW TABLES")
+
+for item in my_cursor:
+    print(item)"""
 
 my_db.close() #Cerrar Base de datos
