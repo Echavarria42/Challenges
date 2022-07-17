@@ -48,7 +48,7 @@ add_client = """ INSERT INTO clients
 (name, lastname)
 VALUES('Juan', 'Molina') """
 my_cursor.execute(add_client)
-my_db.commit()'''
+my_db.commit()
 
 add_client_2 = """ INSERT INTO clients
 (name, lastname)
@@ -60,8 +60,20 @@ VALUES(%s,%s)"""
 
 values = [("Pedro", "Picapiedra"), ("Juliana", "Trujillo"), ("Señor", "Cosa")]
 my_cursor.executemany(add_client_2, values) #Instertar multiples registros con el uso de executemany
+my_db.commit()'''
+
+delete_client = """ DELETE FROM clients 
+WHERE name = 'Pedro' """
+my_cursor.execute(delete_client)
 my_db.commit()
 
+update_client = """ UPDATE clients
+SET lastname = %s
+WHERE name = %s """
+
+values = ("Hermosa", "Anyi")
+my_cursor.execute(update_client,values)
+my_db.commit()
 
 my_cursor.execute("SELECT * FROM clients")
 for client in my_cursor:
