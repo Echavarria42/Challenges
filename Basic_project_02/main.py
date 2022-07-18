@@ -26,4 +26,5 @@ if __name__ == "__main__":
 
     s1 = Student(1,"Jose", "Perez")
 
+    s1.undergraduate_cancellation()
     my_db.close()

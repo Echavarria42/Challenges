@@ -18,3 +18,12 @@ VALUES(%s, %s, %s, %s) """
             my_db.commit()
         
         only_student(CC)
+    
+    def undergraduate_cancellation(self):
+        from main import my_cursor, my_db
+        print("unattached student")
+        add_student = """ DELETE FROM students
+WHERE CC = %s """
+        value = (self.CC,)
+        my_cursor.execute(add_student, value)
+        my_db.commit()
