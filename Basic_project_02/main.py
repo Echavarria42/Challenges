@@ -1,3 +1,4 @@
+from unicodedata import name
 import mysql.connector
 from models.Student import Student
 from models.Undergraduate import Undergraduate
@@ -30,6 +31,6 @@ if __name__ == "__main__":
     math = Undergraduate("Mathematics", 140)
 
     s1 = Student(1,"Jose", "Perez", math)
-
+    s1.update_info( name = None, lastname = "Sierra" , undergraduate = "Fisic")
     #s1.undergraduate_cancellation()
     my_db.close()

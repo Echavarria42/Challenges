@@ -1,4 +1,5 @@
 import imp
+from unicodedata import name
 from decorators import only
 from models.Undergraduate import Undergraduate
 
@@ -21,6 +22,29 @@ VALUES(%s, %s, %s, %s, %s) """
             my_db.commit()
         
         only_student(CC)
+    
+    def update_info(self, **kwargs):
+        from main import my_cursor, my_db
+        update_student = """ UPDATE students
+SET name = %s, lastname = %s, undergraduate = %s
+WHERE CC = %s """
+        values = [ arg if arg != None else self.assignment(key) for key , arg in kwargs.items() ] + [self.CC]
+        my_cursor.execute(update_student, values)
+        my_db.commit()
+
+
+        self.name = values[0]
+        self.lastname = values[1]
+        self.undergraduate = values[2]
+
+
+    def assignment(self, value):
+        if value == "name":
+            return self.name
+        elif value == "lastname":
+            return self.lastname
+        else:
+            return self.undergraduate.name
     
     def undergraduate_cancellation(self):
         from main import my_cursor, my_db
