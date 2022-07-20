@@ -7,6 +7,14 @@ Here you can find a brief demonstration of the handling of **classes, files, pac
 It is an abstraction of a model of a *Store* which sells and rents *Books* and/or *Movies* to *Customers.* 
 The implementation of file handling is reflected in the *save_book, movie or client* method. This method makes use of a *file_save* decorator which is in charge of appending the created object.
 
+B) Basic_project_02 =>
+
+Here you can find a brief demonstration of the handling of **classes, files, packages, database handling and decorators.**.
+It is an abstraction of a model of a *University*. 
+- Student CRUD 
+- MySQL Knowledge
+- Decorators to authenticate uniqueness
+
 1) Basic_01  => "https://platzi.com/comunidad/retos-de-programacion-en-cualquier-lenguaje-primer-nivel-salida-de-mensajes/"
 
 You will choose what to do between: **Adding a pair of numbers, Subtracting pizzas, Adding 2 and Multiplying by another, Past and Future Age, Dividing the count, Calculating days, Converting Miles and Dividing.**
