@@ -29,8 +29,11 @@ my_cursor.execute(create_table_students)
 if __name__ == "__main__":
 
     math = Undergraduate("Mathematics", 140)
+    fisic = Undergraduate("Fisic", 176)
 
     s1 = Student(1,"Jose", "Perez", math)
-    s1.update_info( name = None, lastname = "Sierra" , undergraduate = "Fisic")
-    #s1.undergraduate_cancellation()
+    s2 = Student(2,"Paolo", "Martines", math)
+    s3 = Student(3,"Johana", "Sierra", fisic)
+    s4 = Student(4,"Jose", "Echavarria", fisic)
+    
     my_db.close()
